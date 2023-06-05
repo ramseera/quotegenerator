@@ -5,7 +5,7 @@ import Image from "next/image";
 export const GradientBackgroundCon = styled.div`
   background: linear-gradient(to right, #000046, #1cb5e0);
   background-size: 400% 400%;
-  animation: gradient 6s ease infinite;
+  /* animation: gradient 6s ease infinite; */
   height: 100vh;
   width: 100vw;
   @keyframes gradient {
@@ -31,4 +31,104 @@ export const BackgroundImage2 = styled(Image)`
   z-index: 1;
   right: 0px;
   bottom: -10px;
+`;
+
+export const FooterContainer = styled.div`
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  z-index: 1000000;
+`;
+export const QuoteGeneratorCon = styled.div`
+  min-height: 350px;
+  min-width: 350px;
+  height: 70vh;
+  width: 70vw;
+  border: 2px solid #fffffff2;
+  border-radius: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 70, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(225, 225, 225, 0.18);
+`;
+export const QuoteGeneratorInnerCon = styled.div`
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+`;
+export const QuoteGeneratorTitle = styled.div`
+  font-family: "Permanent Marker", cursive;
+  font-size: 50px;
+  text-align: center;
+  color: white;
+  padding: 0px 20px 0px 20px;
+  position: relative;
+  @media only screen and (max-width: 600px) {
+    font-size: 30px;
+  }
+`;
+export const QuoteGeneratorSubTitle = styled.div`
+  color: white;
+  font-family: "Caveat", cursive;
+  font-size: 35px;
+  padding: 0px 20px 0px 20px;
+  position: relative;
+  @media only screen and (max-width: 600px) {
+    font-size: 25px;
+  }
+  text-align: center;
+  width: 100%;
+`;
+export const GenerateQuoteButton = styled.div`
+  height: 100px;
+  width: 300px;
+  border: 2px solid darkgray;
+  border-radius: 20px;
+
+  margin-top: 20px;
+  position: relative;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+  top: 20px;
+  margin: auto;
+  transform-origin: center;
+
+  background: rgba(0, 0, 70, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(225, 225, 225, 0.18);
+
+  &:hover {
+    filter: brightness(3);
+    transition: 0.2s all ease-in-out;
+    transform: scale(1.1);
+    transform-origin: center;
+  }
+`;
+export const GenerateButtonText = styled.div`
+  color: white;
+  font-family: "Caveat", cursive;
+  font-size: 35px;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
 `;
